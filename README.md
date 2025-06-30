@@ -66,8 +66,8 @@ lib/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd logistics_app
+   git clone git@github.com:tomzy-adex/logisticApp.git
+   cd logisticApp
    ```
 
 2. **Install dependencies**
