@@ -1,0 +1,133 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "admin@example.com",
+      "name": "Admin User",
+      "role": "admin",
+      "createdAt": "2024-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "email": "user@example.com",
+      "name": "Regular User",
+      "role": "user",
+      "createdAt": "2024-01-15T00:00:00.000Z"
+    }
+  ],
+  "shipments": [
+    {
+      "id": "1",
+      "trackingNumber": "TRK001234567",
+      "senderName": "John Doe",
+      "receiverName": "Jane Smith",
+      "originAddress": "123 Main St, New York, NY 10001",
+      "destinationAddress": "456 Oak Ave, Los Angeles, CA 90210",
+      "originCoordinates": {
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      "destinationCoordinates": {
+        "latitude": 34.0522,
+        "longitude": -118.2437
+      },
+      "status": "inTransit",
+      "createdBy": "2",
+      "createdAt": "2024-01-20T00:00:00.000Z",
+      "updatedAt": "2024-01-22T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "trackingNumber": "TRK007654321",
+      "senderName": "Alice Johnson",
+      "receiverName": "Bob Wilson",
+      "originAddress": "789 Pine St, Chicago, IL 60601",
+      "destinationAddress": "321 Elm St, Miami, FL 33101",
+      "originCoordinates": {
+        "latitude": 41.8781,
+        "longitude": -87.6298
+      },
+      "destinationCoordinates": {
+        "latitude": 25.7617,
+        "longitude": -80.1918
+      },
+      "status": "pending",
+      "createdBy": "2",
+      "createdAt": "2024-01-23T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "trackingNumber": "TRK009876543",
+      "senderName": "Charlie Brown",
+      "receiverName": "Diana Prince",
+      "originAddress": "555 Maple Dr, Seattle, WA 98101",
+      "destinationAddress": "888 Cedar Ln, Austin, TX 73301",
+      "originCoordinates": {
+        "latitude": 47.6062,
+        "longitude": -122.3321
+      },
+      "destinationCoordinates": {
+        "latitude": 30.2672,
+        "longitude": -97.7431
+      },
+      "status": "delivered",
+      "createdBy": "2",
+      "createdAt": "2024-01-15T00:00:00.000Z",
+      "updatedAt": "2024-01-24T00:00:00.000Z"
+    }
+  ],
+  "logs": [
+    {
+      "id": "1",
+      "type": "login",
+      "userId": "1",
+      "userEmail": "admin@example.com",
+      "description": "Admin user logged in",
+      "metadata": null,
+      "timestamp": "2024-01-25T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "type": "login",
+      "userId": "2",
+      "userEmail": "user@example.com",
+      "description": "Regular user logged in",
+      "metadata": null,
+      "timestamp": "2024-01-25T09:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "type": "shipmentCreated",
+      "userId": "2",
+      "userEmail": "user@example.com",
+      "description": "Created shipment TRK001234567",
+      "metadata": {
+        "trackingNumber": "TRK001234567"
+      },
+      "timestamp": "2024-01-20T00:00:00.000Z"
+    },
+    {
+      "id": "4",
+      "type": "shipmentCreated",
+      "userId": "2",
+      "userEmail": "user@example.com",
+      "description": "Created shipment TRK007654321",
+      "metadata": {
+        "trackingNumber": "TRK007654321"
+      },
+      "timestamp": "2024-01-23T00:00:00.000Z"
+    },
+    {
+      "id": "5",
+      "type": "shipmentUpdated",
+      "userId": "1",
+      "userEmail": "admin@example.com",
+      "description": "Updated shipment TRK001234567 status to In Transit",
+      "metadata": {
+        "trackingNumber": "TRK001234567",
+        "status": "inTransit"
+      },
+      "timestamp": "2024-01-22T10:00:00.000Z"
+    }
+  ]
+} 
